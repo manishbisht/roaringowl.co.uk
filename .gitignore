@@ -1,0 +1,6 @@
+# Webstorm Editor Filer
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf*
+.idea/httpRequests
+.idea/copilot/chatSessions
