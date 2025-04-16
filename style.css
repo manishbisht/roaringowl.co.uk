@@ -15,6 +15,10 @@
             font-family: 'Space Grotesk', 'Helvetica Neue', sans-serif;
         }
         
+        html{
+            scroll-behavior: smooth;
+        }
+        
         body {
             background-color: var(--black);
             color: var(--off-white);
@@ -66,12 +70,13 @@
         
         /* Header */
         header {
-            padding: 1.5rem 0;
+            padding: 0.7rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             transition: background-color 0.3s ease;
+            background-color: black;
         }
         
         header.scrolled {
@@ -83,6 +88,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
         }
         
         .logo {
@@ -97,8 +103,8 @@
             color: var(--off-white);
         }
         
-        .logo-accent {
-            color: var(--mustard);
+        .logo-img {
+            width: 12vw;
         }
         
         .nav-links {
@@ -399,7 +405,9 @@
         .work-item:hover::before {
             opacity: 1;
         }
-        
+        .work-img{
+            width:100%;
+        }
         .work-info {
             position: absolute;
             bottom: 0;
@@ -414,6 +422,7 @@
         .work-item:hover .work-info {
             transform: translateY(0);
         }
+    
         
         .work-title {
             font-size: 1.5rem;
@@ -427,6 +436,44 @@
             letter-spacing: 1px;
         }
         
+        /* Client Section */
+        .client {
+            padding: 10rem 0;
+            background-color: white;
+        }
+        
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 3rem;
+            /* grid-auto-flow: column; */
+            margin-top: 4rem;
+        }
+        .client .section-title{
+            color: var(--black);
+        }
+        .client .section-subtitle{
+            font-weight:bold
+        }
+        .client-member {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center         ;
+        }
+        
+        .client-photo {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .invert{
+            filter: invert(100%);
+        }
+        
+      
+
         /* Team Section */
         .team {
             padding: 10rem 0;
@@ -544,7 +591,7 @@
         }
         
         .contact-item-content h4 {
-            margin-bottom: 0.5rem;
+            /* margin-bottom: 0.1rem; */
             font-size: 1.2rem;
         }
         
